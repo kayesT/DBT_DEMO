@@ -9,7 +9,7 @@ select
     {{get_season('STARTED_AT')}} AS SEASON_OF_YEAR
 
 FROM
-    {{ source('demo', 'bike') }}
+    {{ ref('stg_bike') }}
 WHERE STARTED_AT != 'started_at'
 )
 
